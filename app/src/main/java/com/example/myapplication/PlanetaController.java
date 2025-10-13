@@ -13,6 +13,10 @@ public class PlanetaController {
         return planetaDao.getPlanetas();
     }
     public ArrayList<String> getNomePlanetas(){
-        ArrayList<String> nome = "opa";
+        ArrayList<String> nomes = new ArrayList<String>();
+        for(Planeta planeta  : planetaDao.getPlanetas()){
+            nomes.add(planeta.nome);
+        }
+        return nomes;
     }
 }
