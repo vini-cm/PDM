@@ -11,8 +11,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
 public class MainActivity2 extends Activity {
     ListView listView;
+    ArrayList<String> nomes;
+    PlanetaController planetaController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +25,7 @@ public class MainActivity2 extends Activity {
         setContentView(R.layout.activity_main);
         listView = findViewById(R.id.listView);
         PlanetaController planetaController = new PlanetaController();
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, planetaController.getNomePlanetas());
+        PlanetaAdapter adapter = new PlanetaAdapter(this, R.layout.item_lista, planetaController.getPlaneta());
 
         listView.setAdapter(adapter);
     }
