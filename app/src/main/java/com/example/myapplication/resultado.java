@@ -1,0 +1,40 @@
+package com.example.myapplication;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TextView;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+public class resultado extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_resultado);
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        Intent i = getIntent();
+        Bundle b = i.getExtras();
+        double base = b.getDouble("VALOR");
+
+        TextView resultados = findViewById(R.id.resultados);
+
+        String resultado = "";
+        for (int j = 1; j <= 10; j++) {
+            resultado += base + " * " + j + " = " + (base * j) + "\n";
+        }
+
+        resultados.setText(resultado);
+    }
+}
