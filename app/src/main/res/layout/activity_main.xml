@@ -7,14 +7,42 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
+    <TextView
+        android:id="@+id/txtvContext"
+        android:layout_width="85dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="54dp"
+        android:text="Sensor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/ListV"
+        app:layout_constraintEnd_toStartOf="@+id/txtvSensor"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/txtvSensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtvContext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtvContext"
+        app:layout_constraintTop_toTopOf="@+id/txtvContext" />
+
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/ListV"
         android:layout_width="0dp"
-        android:layout_height="729dp"
+        android:layout_height="0dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="54dp"
         android:layout_marginEnd="1dp"
+        android:layout_marginBottom="59dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txtvContext" />
 </androidx.constraintlayout.widget.ConstraintLayout>
