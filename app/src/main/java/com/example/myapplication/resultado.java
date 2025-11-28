@@ -15,7 +15,6 @@ public class resultado extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_resultado);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -25,8 +24,7 @@ public class resultado extends AppCompatActivity {
         });
 
         Intent i = getIntent();
-        Bundle b = i.getExtras();
-        double base = b.getDouble("VALOR");
+        double base = i.getDoubleExtra("VALOR", 0);
 
         TextView resultados = findViewById(R.id.resultados);
 
