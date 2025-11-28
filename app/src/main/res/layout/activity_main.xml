@@ -6,57 +6,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="com.example.atividadenova.MainActivity">
 
     <TextView
+        android:id="@+id/textCalcImc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Calculadora IMC" />
+        android:text="Calculadora IMC"
+        android:textSize="24sp"
+        android:padding="16dp" />
 
     <TextView
-        android:id="@+id/edPeso"
+        android:id="@+id/pes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Peso (kg)" />
+        android:text="Peso (Kg)" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/editPes"
         android:layout_width="match_parent"
-        android:layout_height="78dp"
-        android:layout_weight="0.1"
-        android:ems="10"
-        android:hint="X (kg)"
-        android:inputType="text" />
+        android:layout_height="wrap_content"
+        android:hint="00.00"
+        android:inputType="numberDecimal" />
 
     <TextView
-        android:id="@+id/edAltura"
+        android:id="@+id/alt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.1"
-        android:text=" Altura (m)" />
+        android:text="Altura (m)" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/editAlt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.1"
-        android:ems="10"
-        android:hint="Y metros"
-        android:inputType="text" />
+        android:hint="0.00"
+        android:inputType="numberDecimal" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnCalcular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.1"
-        android:text="Calcular IMC" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.4"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:text="Calcular" />
 
 </LinearLayout>
