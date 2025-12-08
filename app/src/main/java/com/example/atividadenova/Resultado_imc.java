@@ -14,7 +14,7 @@ public class Resultado_imc extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_imc_resultado); // <- precisa bater com o XML
+        setContentView(R.layout.activity_imc_resultado);
 
         Intent i = getIntent();
         Bundle b = i.getExtras();
