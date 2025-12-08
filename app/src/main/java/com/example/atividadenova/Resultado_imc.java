@@ -42,7 +42,6 @@ public class Resultado_imc extends AppCompatActivity {
             imageView.setImageResource(R.drawable.obesidade3);
         }
 
-        // Botão Voltar
         findViewById(R.id.btnReturn).setOnClickListener(v -> finish());
     }
 }
